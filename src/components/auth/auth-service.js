@@ -9,6 +9,16 @@ class AuthService {
     this.service = service;
   }
 
+  //post para crear user.
+  signup = (username, password) => {
+    return this.service.post('/signup', {username, password})
+    .then(response => response.data)
+  }
+//get para comprobar si el usuario esta conectado.
+  loggedin = () => {
+    return this.service.get('/loggedin')
+    .then(response => response.data)
+  }
 }
 
 export default AuthService;
