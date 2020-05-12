@@ -9,6 +9,7 @@ import ProjectDetails from "./components/projects/ProjectDetails";
 // import TaskDetails from "./components/tasks/TaskDetails";
 import Signup from "./components/auth/Signup";
 import AuthService from './components/auth/auth-service';
+import Login from './components/auth/Login';
 
 class App extends Component {
 
@@ -64,6 +65,7 @@ class App extends Component {
         <div className="App">
           <Navbar userInSession={this.state.loggedInUser} />
           <Switch>
+          <Route exact path='/' render={() => <Login getUser={this.getTheUser}/>}/>
           {/* En esta ruta pasamos getTheUser y recibimos el user. */}
             <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
             <Route exact path="/projects" component={ProjectList}/>

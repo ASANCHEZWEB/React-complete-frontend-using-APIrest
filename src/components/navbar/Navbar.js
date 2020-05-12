@@ -27,14 +27,13 @@ class Navbar extends Component {
         </nav>
       )
     } else {
-      return (
-        <div>
+      return ( 
         <nav className="nav-style">
           <ul>
+            <li><Link to='/' style={{ textDecoration: 'none' }}>Login</Link></li>
             <li><Link to='/signup' style={{ textDecoration: 'none' }}>Signup</Link></li>
           </ul>
         </nav>
-        </div>
       )
     }
     }
