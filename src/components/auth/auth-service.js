@@ -14,9 +14,13 @@ class AuthService {
     return this.service.post('/signup', {username, password})
     .then(response => response.data)
   }
-  //login
   login = (username, password) => {
     return this.service.post('/login', {username, password})
+    .then(response => response.data)
+  }
+  
+  logout = () => {
+    return this.service.post('/logout', {})
     .then(response => response.data)
   }
 //get para comprobar si el usuario esta conectado.

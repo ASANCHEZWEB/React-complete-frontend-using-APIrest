@@ -11,7 +11,6 @@ class Login extends Component {
     this.service = new AuthService();
   }
 
-    //envia el post al server
   handleFormSubmit = (event) => {
     event.preventDefault();
     const username = this.state.username;
@@ -23,7 +22,7 @@ class Login extends Component {
     })
     .catch( error => console.log(error) )
   }
-    //actualiza el nombre y password del state en tiempo real
+    
   handleChange = (event) => {  
     const {name, value} = event.target;
     this.setState({[name]: value});

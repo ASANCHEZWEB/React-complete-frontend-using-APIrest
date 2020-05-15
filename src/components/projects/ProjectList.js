@@ -13,7 +13,7 @@ class ProjectList extends Component {
   }
 
   getAllProjects = () =>{
-    axios.get(`http://localhost:5000/api/projects`)
+    axios.get(`http://localhost:5000/api/projects`, {withCredentials:true})
     .then(responseFromApi => {
       this.setState({
         listOfProjects: responseFromApi.data
